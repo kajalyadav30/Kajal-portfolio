@@ -1,0 +1,540 @@
+/* =========================================================
+   HOME PAGE - MODIFIED TO AURORA FLOW BLUE (3rd Wala)
+========================================================= */
+
+.home-section {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  overflow: hidden;
+
+  /* NEW - Soft Aurora Flow Background - Classy */
+  background-color: #020617;
+  background-image: 
+    radial-gradient(ellipse 800px 600px at 85% -10%, rgba(56, 189, 248, 0.15), transparent 60%),
+    radial-gradient(ellipse 600px 400px at -10% 100%, rgba(37, 99, 235, 0.18), transparent 65%);
+  
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 55px 105px;
+}
+
+/* =========================================================
+   BACKGROUND GLOW BALLS - NOW SOFT CLASSY
+========================================================= */
+
+.home-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(75px);
+  z-index: 0;
+}
+
+/* LEFT GLOW - Soft */
+.glow-left {
+  width: 500px;
+  height: 500px;
+  left: -180px;
+  top: 150px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+/* RIGHT GLOW - Soft */
+.glow-right {
+  width: 600px;
+  height: 600px;
+  right: -200px;
+  top: -100px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+  opacity: 0.5;
+}
+
+/* BOTTOM GLOW - Soft */
+.glow-bottom {
+  width: 700px;
+  height: 400px;
+  left: 10%;
+  bottom: -200px;
+  background: radial-gradient(ellipse, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+/* =========================================================
+   EXTRA AURORA STREAKS - 3rd Wala Look
+========================================================= */
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 350px;
+  left: -10%;
+  top: 5%;
+  background: linear-gradient(110deg, transparent 20%, rgba(56, 189, 248, 0.08) 45%, rgba(59, 130, 246, 0.06) 55%, transparent 80%);
+  transform: rotate(-8deg);
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-section::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 300px;
+  left: -10%;
+  bottom: 0%;
+  background: linear-gradient(-110deg, transparent 25%, rgba(37, 99, 235, 0.09) 50%, transparent 75%);
+  transform: rotate(12deg);
+  filter: blur(35px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+   REMOVE STARS
+========================================================= */
+
+.stars {
+  display: none;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.home-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+/* =========================================================
+   PROFILE CARD - SAME AS YOURS
+========================================================= */
+
+.profile-card {
+  width: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(0, 126, 255, 0.24), rgba(2, 20, 55, 0.38));
+  border: 1.5px solid rgba(0, 190, 255, 0.72);
+  box-shadow: 0 0 12px rgba(0, 174, 255, 0.7), 0 0 45px rgba(0, 119, 255, 0.25), inset 0 0 40px rgba(0, 130, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: 0.35s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(0, 190, 255, 0.9), 0 0 65px rgba(0, 119, 255, 0.35), inset 0 0 45px rgba(0, 130, 255, 0.1);
+}
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.profile-image-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #00c8ff;
+  box-shadow: 0 0 10px #00c8ff, 0 0 28px rgba(0, 200, 255, 0.9), 0 0 55px rgba(0, 119, 255, 0.5);
+  background: #041326;
+  margin-bottom: 25px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #05182d;
+}
+
+/* =========================================================
+   PROFILE TEXT
+========================================================= */
+
+.profile-card h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+.profile-status {
+  margin: 7px 0 22px;
+  color: #54d9ff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.profile-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-socials a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #00bfff;
+  background: rgba(0, 86, 160, 0.2);
+  box-shadow: 0 0 8px rgba(0, 190, 255, 0.8), inset 0 0 12px rgba(0, 150, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.profile-socials a:hover {
+  transform: translateY(-5px) scale(1.08);
+  background: rgba(0, 155, 255, 0.2);
+  box-shadow: 0 0 15px #00c8ff, 0 0 30px rgba(0, 190, 255, 0.5);
+}
+
+.profile-socials svg {
+  width: 24px;
+  height: 24px;
+}
+
+.linkedin-icon {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.home-info {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.home-title {
+  margin: 0;
+  font-size: clamp(48px, 5vw, 68px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.home-title span {
+  color: #20c8ff;
+  text-shadow: 0 0 8px rgba(0, 200, 255, 0.8), 0 0 25px rgba(0, 150, 255, 0.5);
+}
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.home-subtitle {
+  margin: 13px 0 25px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #53d9ff;
+  text-shadow: 0 0 8px rgba(0, 180, 255, 0.35);
+}
+
+/* =========================================================
+   PROFESSION TAGS
+========================================================= */
+
+.profession-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.profession-tags span {
+  white-space: nowrap;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(0, 190, 255, 0.8);
+  background: rgba(0, 120, 210, 0.14);
+  color: #d9f7ff;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(0, 180, 255, 0.35);
+  transition: 0.3s ease;
+}
+
+.profession-tags span:hover {
+  background: rgba(0, 160, 255, 0.28);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.65);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   INFO CARDS
+========================================================= */
+
+.info-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.info-card {
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 25px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(0, 105, 210, 0.34), rgba(4, 25, 65, 0.38));
+  border: 1.5px solid rgba(0, 184, 255, 0.72);
+  box-shadow: 0 0 10px rgba(0, 180, 255, 0.45), inset 0 0 30px rgba(0, 110, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 17px rgba(0, 200, 255, 0.7), 0 0 35px rgba(0, 130, 255, 0.2);
+}
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+  grid-column: 1 / -1;
+  min-height: 112px;
+}
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.icon-box {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  background: rgba(0, 150, 255, 0.25);
+  border: 1px solid rgba(0, 200, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 190, 255, 0.35);
+}
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.info-card h4 {
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e5f8ff;
+}
+
+/* =========================================================
+   CONNECT BUTTON
+========================================================= */
+
+.connect-button {
+  position: absolute;
+  right: 75px;
+  bottom: 38px;
+  z-index: 5;
+  min-width: 175px;
+  padding: 13px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid #00c8ff;
+  background: rgba(0, 100, 180, 0.18);
+  box-shadow: 0 0 10px #00c8ff, 0 0 25px rgba(0, 180, 255, 0.55), inset 0 0 12px rgba(0, 150, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.connect-button:hover {
+  transform: translateY(-4px);
+  background: rgba(0, 170, 255, 0.22);
+  box-shadow: 0 0 15px #00c8ff, 0 0 40px rgba(0, 190, 255, 0.75);
+}
+
+/* =========================================================
+   GLOWING LINE UNDER BUTTON
+========================================================= */
+
+.connect-button span {
+  position: absolute;
+  bottom: -8px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  border-radius: 5px;
+  background: #00c8ff;
+  box-shadow: 0 0 8px #00c8ff, 0 0 18px #00c8ff;
+}
+
+/* =========================================================
+   RESPONSIVE - LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+  .home-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .home-container {
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+  }
+  .profile-card {
+    width: 340px;
+    height: 400px;
+  }
+  .profile-image-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+  .home-title {
+    font-size: 50px;
+  }
+  .profession-tags span {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+  .home-section {
+    min-height: auto;
+    padding: 55px 20px 110px;
+  }
+  .home-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    max-width: 600px;
+  }
+  .profile-card {
+    width: 100%;
+    max-width: 390px;
+    height: 430px;
+    margin: 0 auto;
+  }
+  .home-info {
+    text-align: center;
+  }
+  .home-title {
+    white-space: normal;
+    font-size: 48px;
+  }
+  .home-subtitle {
+    font-size: 19px;
+  }
+  .profession-tags {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .info-cards {
+    text-align: left;
+  }
+  .connect-button {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 35px;
+  }
+  .connect-button:hover {
+    transform: translateX(50%) translateY(-4px);
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+  .home-section {
+    padding: 40px 15px 105px;
+  }
+  .profile-card {
+    height: 400px;
+  }
+  .profile-image-wrapper {
+    width: 165px;
+    height: 165px;
+  }
+  .home-title {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+  .home-subtitle {
+    font-size: 17px;
+  }
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+  .contact-card {
+    grid-column: auto;
+  }
+  .info-card {
+    min-height: 125px;
+  }
+  .connect-button {
+    min-width: 165px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
