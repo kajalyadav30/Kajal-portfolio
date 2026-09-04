@@ -4,177 +4,329 @@ import "../CSS/Home.css";
 
 const Home = () => {
   return (
-    <section className="home-section">
+    <main className="home-page">
 
-      {/* Background */}
-      <div className="home-glow glow-left"></div>
-      <div className="home-glow glow-right"></div>
-      <div className="home-glow glow-bottom"></div>
-      <div className="stars"></div>
+      {/* ================= HERO SECTION ================= */}
 
-      <div className="home-container">
+      <section className="home-hero">
 
-        {/* LEFT PROFILE CARD */}
-        <div className="profile-card">
+        {/* Decorative Background */}
+        <div className="hero-dot-pattern hero-dots-left"></div>
+        <div className="hero-dot-pattern hero-dots-right"></div>
+        <div className="hero-wave"></div>
 
-          <div className="profile-image-wrapper">
-            <img
-              src="/photo.jpg"
-              alt="Kajal Yadav"
-              className="profile-photo"
-            />
-          </div>
 
-          <h2>KAJAL YADAV</h2>
+        <div className="home-hero-container">
 
-          <p className="profile-status">
-            Open to Opportunities
-          </p>
+          {/* ================= LEFT - PHOTO ================= */}
 
-          <div className="profile-socials">
+          <div className="home-photo-area">
 
-            <a
-              href="https://github.com/kajalyadav30"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
-              <svg viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
-                />
-              </svg>
-            </a>
+            <div className="photo-blue-shape"></div>
 
-            <a
-              href="https://www.linkedin.com/in/kajal-yadav-787a32260/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <span className="linkedin-icon">in</span>
-            </a>
+            <div className="photo-frame">
+              <img
+                src="/photo.jpg"
+                alt="Kajal Yadav"
+                className="home-profile-photo"
+              />
+            </div>
 
-            <a
-              href="https://www.instagram.com/_kajal.30_/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <svg viewBox="0 0 24 24">
-                <rect
-                  x="3"
-                  y="3"
-                  width="18"
-                  height="18"
-                  rx="5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-              </svg>
-            </a>
+
+            {/* Floating Card */}
+
+            <div className="floating-profile-card">
+              <div className="floating-icon">
+                &lt;/&gt;
+              </div>
+
+              <div>
+                <strong>MERN Stack</strong>
+                <span>Developer</span>
+              </div>
+            </div>
 
           </div>
+
+
+          {/* ================= RIGHT - INTRO ================= */}
+
+          <div className="home-intro">
+
+            <div className="availability-badge">
+              <span className="availability-dot"></span>
+              Available for opportunities
+            </div>
+
+
+            <h1 className="home-heading">
+              <span className="heading-hi">Hi, I’m</span>
+              <span className="heading-name">KAJAL YADAV</span>
+            </h1>
+
+
+            <h2 className="home-role">
+              Full Stack Developer
+            </h2>
+
+
+            <p className="home-description">
+              I build modern, responsive and user-friendly web applications
+              using the MERN stack. Passionate about creating clean
+              interfaces and solving real-world problems through code.
+            </p>
+
+
+            {/* ================= TECH STACK ================= */}
+
+            <div className="home-tech-stack">
+
+              <span className="tech-item">
+                <span className="tech-symbol react-symbol">⚛</span>
+                React.js
+              </span>
+
+              <span className="tech-item">
+                <span className="tech-symbol node-symbol">⬡</span>
+                Node.js
+              </span>
+
+              <span className="tech-item">
+                <span className="tech-symbol express-symbol">EX</span>
+                Express.js
+              </span>
+
+              <span className="tech-item">
+                <span className="tech-symbol mongo-symbol">●</span>
+                MongoDB
+              </span>
+
+            </div>
+
+
+            {/* ================= BUTTONS ================= */}
+
+            <div className="home-buttons">
+
+              <Link
+                to="/projects"
+                className="primary-home-btn"
+              >
+                View My Projects
+                <span>→</span>
+              </Link>
+
+
+              <a
+                href="/logos/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="secondary-home-btn"
+              >
+                View Resume
+                <span>↓</span>
+              </a>
+
+            </div>
+
+
+            {/* ================= SOCIALS ================= */}
+
+            <div className="home-socials">
+
+              <span className="find-me">
+                Find me on
+              </span>
+
+
+              <a
+                href="https://github.com/kajalyadav30"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="social-circle"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1.73.81.77 2.1v3.11c0 .3.2.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                  />
+                </svg>
+              </a>
+
+
+              <a
+                href="https://www.linkedin.com/in/kajal-yadav-787a32260/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="social-circle linkedin-circle"
+              >
+                in
+              </a>
+
+
+              <a
+                href="https://www.instagram.com/_kajal.30_/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="social-circle"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ================= INFORMATION STRIP ================= */}
+
+      <section className="home-info-strip">
+
+        {/* About */}
+
+        <div className="home-info-item about-info">
+
+          <div className="info-icon">
+            <span>♙</span>
+          </div>
+
+          <div className="info-text">
+            <h3>About Me</h3>
+
+            <p>
+              B.Tech Information Technology student and
+              aspiring software developer who loves to
+              build impactful web applications.
+            </p>
+          </div>
+
         </div>
 
 
-        {/* RIGHT CONTENT */}
-        <div className="home-info">
+        {/* Location */}
 
-          <h1 className="home-title">
-            Hi, I'm <span>KAJAL YADAV</span>
-          </h1>
+        <div className="home-info-item">
 
-          <p className="home-subtitle">
-            Full Stack Developer | MERN Stack  Developer | Software Engineer
-          </p>
-
-
-          {/* Profession Tags */}
-          <div className="profession-tags">
-
-            <span>MERN Stack Developer</span>
-            <span>Full Stack Developer</span>
-            <span>Frontend Developer</span>
-            <span>Software Developer</span>
-            <span>Web Developer</span>
-
+          <div className="info-icon">
+            📍
           </div>
 
+          <div className="info-text">
+            <h3>Location</h3>
 
-          {/* INFO CARDS */}
-          <div className="info-cards">
-
-            <div className="info-card">
-
-              <div className="icon-box location-icon">
-                📍
-              </div>
-
-              <div>
-                <h4>Location</h4>
-                <p>Bhilai, Chhattisgarh, India</p>
-              </div>
-
-            </div>
-
-
-            <div className="info-card">
-
-              <div className="icon-box expertise-icon">
-                💡
-              </div>
-
-              <div>
-                <h4>Expertise</h4>
-                <p>
-                  Full-stack development,
-                  <br />
-                  Problem Solving
-                </p>
-              </div>
-
-            </div>
-
-
-            <div className="info-card contact-card">
-
-              <div className="icon-box contact-icon">
-                ✉
-              </div>
-
-              <div>
-                <h4>Contact</h4>
-                <p>Kajalapr24@gmail.com</p>
-              </div>
-
-            </div>
-
+            <p>
+              Bhilai, Chhattisgarh,
+              <br />
+              India
+            </p>
           </div>
 
         </div>
 
-      </div>
+
+        {/* Education */}
+
+        <div className="home-info-item">
+
+          <div className="info-icon">
+            ▣
+          </div>
+
+          <div className="info-text">
+            <h3>Education</h3>
+
+            <p>
+              B.Tech (IT)
+              <br />
+              2023 – 2027
+            </p>
+          </div>
+
+        </div>
 
 
-      {/* CONNECT BUTTON */}
-      <Link to="/contact" className="connect-button">
-        Connect with me
-        <span></span>
-      </Link>
+        {/* Expertise */}
 
-    </section>
+        <div className="home-info-item">
+
+          <div className="info-icon">
+            💡
+          </div>
+
+          <div className="info-text">
+            <h3>Expertise</h3>
+
+            <p>
+              Full-stack development,
+              <br />
+              Problem Solving
+            </p>
+          </div>
+
+        </div>
+
+
+        {/* Email */}
+
+        <div className="home-info-item email-info">
+
+          <div className="info-icon">
+            ✉
+          </div>
+
+          <div className="info-text">
+            <h3>Email</h3>
+
+            <p>
+              Kajalapr24@gmail.com
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 };
 

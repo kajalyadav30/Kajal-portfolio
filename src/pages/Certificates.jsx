@@ -27,9 +27,9 @@ export default function Certificates() {
 
   return (
     <section className="container" style={{ padding: "40px 0" }}>
-      <div className="card" style={{ background: "#111", borderRadius: 12, padding: 24 }}>
-        <h2 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: 4 }}>Certificates 🏅</h2>
-        <p className="lead" style={{ color: "#aaa" }}>
+      <div className="card" style={{ background: 'rgba(182, 216, 242, 0.81)', borderRadius: 12, padding: 24 }}>
+        <h2 style={{ fontSize: "1.8rem", color: "#031f5c", marginBottom: 4 }}>Certificates 🏅</h2>
+        <p className="lead" style={{ color: "#000000" }}>
           Explore my certifications — technical & others.
         </p>
 

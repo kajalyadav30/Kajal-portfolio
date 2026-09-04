@@ -3,39 +3,35 @@ import { motion } from "framer-motion";
 
 export default function Resume() {
   return (
-    <section className="container" style={{ padding: "60px 0" }}>
+    <section className="container" style={{ padding: "60px 0", display: "flex", justifyContent: "center" }}>
       <motion.div
         className="card"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         style={{
-          background: "#0b0b0b",
+          background: 'rgba(182, 216, 242, 0.81)', 
           borderRadius: 16,
-          padding: "40px 30px",
-          color: "#e5e5e5",
-          boxShadow: "0 0 25px rgba(0, 153, 255, 0.1)",
+          padding: "24px",
+          width: "85%",
+          maxWidth: "1100px",
+          margin: "0 auto",
+          boxShadow: "none",
         }}
       >
         <motion.h2
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          style={{ fontSize: 28, color: "#00b4ff", marginBottom: 12 }}
+          style={{ fontSize: 26, color: "#0F172A", marginBottom: 4, fontWeight: 700 }}
         >
           📄 Resume
         </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          style={{ color: "#aaa", marginBottom: 25 }}
-        >
+        <p style={{ color: "#334155", marginBottom: 20, fontSize: 14 }}>
           A quick glance at my journey.
-        </motion.p>
+        </p>
 
-        {/* Profile Header */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,216 +42,119 @@ export default function Resume() {
             alignItems: "flex-start",
             flexWrap: "wrap",
             gap: 20,
-            background: "rgba(255,255,255,0.03)",
-            padding: "24px 20px",
+            background: "#0A0A0A",
+            padding: "20px",
             borderRadius: 12,
+            color: "white",
           }}
         >
           <div>
-            <h3 style={{ fontSize: 24, color: "#00b4ff", marginBottom: 4 }}>
+            <h3 style={{ fontSize: 22, color: "#38BDF8", marginBottom: 8 }}>
               👨‍💻 KAJAL YADAV
             </h3>
-            <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
-              📍 Bhilai , Chhattisgarh
+            <p style={{ margin: "4px 0", fontSize: 14, color: "#CBD5E1" }}>
+              📍 Bhilai, Chhattisgarh
             </p>
-            <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
+            <p style={{ margin: "4px 0", fontSize: 14, color: "#CBD5E1" }}>
               ✉️ kajalapr24@gmail.com | 📞 +91 9343863314
             </p>
           </div>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
+          <div
             style={{
-              background: "linear-gradient(135deg, #00b4ff44, #0b0b0b)",
-              borderRadius: 12,
-              padding: "14px 20px",
-              border: "1px solid rgba(255,255,255,0.1)",
-              maxWidth: 560,
-              fontSize: 14,
+              background: "#141414",
+              borderRadius: 10,
+              padding: "14px 18px",
+              border: "1px solid rgba(255,255,255,0.08)",
+              maxWidth: 520,
+              fontSize: 13,
               lineHeight: 1.6,
             }}
           >
-            <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
-            <p style={{ marginTop: 6, color: "#ccc" }}>
+            <strong style={{ color: "#38BDF8" }}>Professional Summary:</strong>
+            <p style={{ marginTop: 6, color: "#A1A1AA" }}>
               Full Stack Web Developer skilled in the MERN stack with hands-on experience building responsive web applications, RESTful APIs,
-              secure authentication systems, and interactive user interfaces. Proficient in developing scalable and maintainable applications
-              with a strong focus on problem-solving, clean UI/UX, and efficient code. Seeking to contribute technical skills to innovative projects
-             while growing as a software developer.
+              secure authentication systems, and interactive UIs. Focused on clean UI/UX and efficient code.
             </p>
-          </motion.div>
-        </motion.div>
-
-        {/* Education Section with Border Box */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          style={{
-            marginTop: 40,
-            border: "1px solid rgba(255,255,255,0.1)",
-            borderRadius: 12,
-            padding: "20px 24px",
-            background: "rgba(255,255,255,0.03)",
-          }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
-            🎓 Education
-          </h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>
-              <strong>B.Tech in Information Technology</strong> — S.S.T.C
-              (Shri Shankaracharya Technical Campus Bhilai), 2023–2027 <br />
-              <span style={{ color: "#aaa" }}></span>
-            </li>
-            <li style={{ marginTop: 8 }}>
-              <strong>12th Board — D.A.V Public School</strong> (CBSE
-              Board) <br />
-              <span style={{ color: "#aaa" }}>Percentage: 76%</span>
-            </li>
-            <li style={{ marginTop: 8 }}>
-              <strong>10th Board — D.A.V Public School</strong> (CBSE Board)
-              <br />
-              <span style={{ color: "#aaa" }}>Percentage: 82%</span>
-            </li>
-          </ul>
-        </motion.div>
-
-        {/* Projects */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          style={{ marginTop: 40 }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>💼 Projects</h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>1️⃣ CHASKAA-food ordering website</li>
-            <li>2️⃣ STUDENTSWAP-campus marketplace</li>
-            <li>3️⃣ My portfolio</li>
-          </ul>
-        </motion.div>
-
-        {/* Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          style={{ marginTop: 40 }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>⚙️ Skills</h4>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {[
-              "C",
-              "C++",
-              "Java",
-              "CSS",
-              "HTML",
-              "Node.js",
-              "SQL",
-              "Express.js",
-              "React",
-              "MySQL",
-              "MongoDB",
-              "Git",
-              "Problem Solving",
-              "Teamwork",
-              "Adaptability",
-              "Creativity",
-            ].map((skill) => (
-              <motion.span
-                key={skill}
-                whileHover={{ scale: 1.1, backgroundColor: "rgba(0,180,255,0.3)" }}
-                style={{
-                  background: "rgba(255,255,255,0.05)",
-                  padding: "6px 12px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#ccc",
-                }}
-              >
-                {skill}
-              </motion.span>
-            ))}
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 30,
-            marginTop: 40,
-          }}
-        >
-          {[
-            { name: "💻 GitHub", link: "https://github.com/kajalyadav30" },
-            { name: "💼 LinkedIn", link: "https://www.linkedin.com/in/kajal-yadav-787a32260/" },
-          ].map((site) => (
-            <motion.a
-              key={site.name}
-              href={site.link}
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.1, color: "#00b4ff" }}
-              style={{
-                color: "#ccc",
-                textDecoration: "none",
-                fontSize: 15,
-                fontWeight: 500,
-              }}
-            >
-              {site.name}
-            </motion.a>
-          ))}
-        </motion.div>
 
-        {/* PDF Viewer */}
+        
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginTop: 20 }}>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            style={{
+              borderRadius: 12,
+              padding: "20px",
+              background: "#0A0A0A",
+              color: "white",
+            }}
+          >
+            <h4 style={{ fontSize: 18, color: "#38BDF8", marginBottom: 12 }}>
+              🎓 Education
+            </h4>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.7, fontSize: 13, color: "#D4D4D8" }}>
+              <li style={{ marginBottom: 10 }}>
+                <strong style={{color: "white"}}>B.Tech in IT</strong> — S.S.T.C Bhilai, 2023–2027
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong style={{color: "white"}}>12th - D.A.V Public School</strong> (CBSE) <br />
+                <span style={{ color: "#38BDF8" }}>76%</span>
+              </li>
+              <li>
+                <strong style={{color: "white"}}>10th - D.A.V Public School</strong> (CBSE) <br />
+                <span style={{ color: "#38BDF8" }}>82%</span>
+              </li>
+            </ul>
+          </motion.div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            <div style={{ background: "#0A0A0A", borderRadius: 12, padding: "20px", color: "white" }}>
+              <h4 style={{ fontSize: 18, color: "#38BDF8", marginBottom: 12 }}>💼 Projects</h4>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8, fontSize: 13, color: "#D4D4D8" }}>
+                <li>1️⃣ CHASKAA - food ordering website</li>
+                <li>2️⃣ STUDENTSWAP - campus marketplace</li>
+                <li>3️⃣ My portfolio</li>
+              </ul>
+            </div>
+
+            <div style={{ background: "#0A0A0A", borderRadius: 12, padding: "20px", color: "white" }}>
+              <h4 style={{ fontSize: 18, color: "#38BDF8", marginBottom: 12 }}>⚙️ Skills</h4>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {["C","C++","Java","HTML","CSS","Node.js","SQL","Express.js","React","MySQL","MongoDB","Git"].map((skill) => (
+                  <span key={skill} style={{ background: "#1F1F23", padding: "5px 10px", borderRadius: 6, fontSize: 12, color: "#E4E4E7", border: "1px solid rgba(255,255,255,0.06)" }}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div style={{ display: "flex", justifyContent: "center", gap: 20, marginTop: 24 }}>
+          <a href="https://github.com/kajalyadav30" target="_blank" rel="noreferrer" style={{ background: "#0A0A0A", color: "white", padding: "8px 16px", borderRadius: 8, textDecoration: "none", fontSize: 14 }}>💻 GitHub</a>
+          <a href="https://www.linkedin.com/in/kajal-yadav-787a32260/" target="_blank" rel="noreferrer" style={{ background: "#0A0A0A", color: "white", padding: "8px 16px", borderRadius: 8, textDecoration: "none", fontSize: 14 }}>💼 LinkedIn</a>
+        </div>
+
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          style={{
-            marginTop: 50,
-            borderRadius: 12,
-            overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
+          style={{ marginTop: 20, borderRadius: 12, overflow: "hidden", background: "#0A0A0A", padding: "8px" }}
         >
-          <iframe
-            src="/logos/resume.pdf"
-            title="Kajal Yadav Resume"
-            style={{
-              width: "100%",
-              height: "650px",
-              border: "none",
-              background: "#111",
-            }}
-          />
+          <iframe src="/logos/resume.pdf" title="Kajal Yadav Resume" style={{ width: "100%", height: "650px", border: "none", borderRadius: "8px", background: "#111" }} />
         </motion.div>
 
-        {/* Download Button */}
-        <motion.a
-          href="/logos/resume.pdf"
-          download
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          style={{
-            display: "inline-block",
-            marginTop: 20,
-            background: "#00b4ff",
-            color: "#fff",
-            padding: "10px 22px",
-            borderRadius: 8,
-            textDecoration: "none",
-            fontWeight: 500,
-            letterSpacing: 0.3,
-          }}
-        >
-          ⬇️ Download Resume
-        </motion.a>
-
+        <div style={{ textAlign: "center", marginTop: 16 }}>
+          <motion.a href="/logos/resume.pdf" download whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} style={{ display: "inline-block", background: "#0A0A0A", color: "#38BDF8", padding: "10px 22px", borderRadius: 8, textDecoration: "none", fontWeight: 600, border: "1px solid #38BDF8" }}>
+            ⬇️ Download Resume
+          </motion.a>
+        </div>
 
       </motion.div>
     </section>

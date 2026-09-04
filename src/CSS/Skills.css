@@ -1,4 +1,3 @@
-/* ---------- Header: smaller, left-aligned, no big gaps ---------- */
 .skills-header {
   text-align: left;
   margin: 10px 0 12px 4%;
@@ -28,7 +27,7 @@
   padding: 0;
 }
 
-/* ---------- Orb area: narrower margins and reduced height ---------- */
+/* ---------- Orb area ---------- */
 .skills-stage {
   position: relative;
   width: 94%;
@@ -41,7 +40,6 @@
   overflow: hidden;
 }
 
-/* Shrink the orbs themselves (logo + text) */
 .skill-circle {
   position: absolute;
   width: 68px;
@@ -73,12 +71,15 @@
   padding: 0;
 }
 
-/* ---------- Skills Table: unchanged from original ---------- */
+/* ---------- Skills Table: FIXED TO CENTER WITH STAGE ---------- */
 .skills-table {
-  margin-top: 50px;
+  width: 94%;
+  max-width: 1200px;
+  margin: 50px auto 0 auto; /* ✅ same width + auto margin = stage ke barabar center */
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-items: center;
 }
 
 .skills-row {
@@ -86,10 +87,11 @@
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .skill-box {
-  background: linear-gradient(145deg, #080808 0%, #0f0f0f 100%);
+  background: linear-gradient(145deg, #56b0e4 0%, #0f0f0f 100%);
   border: 1px solid rgba(0, 255, 255, 0.12);
   border-radius: 12px;
   padding: 18px 22px;
@@ -114,4 +116,24 @@
   color: #b0b0b0;
   margin-bottom: 6px;
   transition: color 0.2s, transform 0.2s;
+}
+/* FINAL FIX - neeche wale 6 boxes ko center karne ke liye */
+.skills-stage {
+  width: 75% !important;
+  margin: 90px auto 0 auto !important; /* 90px se C++ cut hona bhi band hoga */
+  display: block !important;
+}
+
+.skills-table, .skills-grid, .skills-cards-container {
+  width: 75% !important;
+  max-width: none !important;
+  margin: 30px auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

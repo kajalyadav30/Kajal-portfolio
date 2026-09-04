@@ -1,540 +1,1067 @@
 /* =========================================================
-   HOME PAGE - MODIFIED TO AURORA FLOW BLUE (3rd Wala)
+   HOME PAGE - BLUE PROFESSIONAL PORTFOLIO
 ========================================================= */
 
-.home-section {
-  position: relative;
-  min-height: calc(100vh - 70px);
+.home-page {
   width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #172033;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+  position: relative;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef6ff 0%,
+      #f7fbff 48%,
+      #e7f1ff 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* Soft blue wave on right */
+
+.hero-wave {
+  position: absolute;
+
+  right: -160px;
+  bottom: -220px;
+
+  width: 600px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 157, 236, 0.13);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DOT PATTERNS
+========================================================= */
+
+.hero-dot-pattern {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  opacity: 0.55;
+
+  background-image: radial-gradient(
+    #77adf0 2px,
+    transparent 2px
+  );
+
+  background-size: 15px 15px;
+
+  pointer-events: none;
+}
+
+.hero-dots-left {
+  left: 65px;
+  top: 160px;
+}
+
+.hero-dots-right {
+  right: 60px;
+  top: 55px;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.home-hero-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 500px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 100px;
+
+  padding: 55px 0 70px;
+}
+
+
+/* =========================================================
+   PHOTO AREA
+========================================================= */
+
+.home-photo-area {
+  position: relative;
+
+  width: 430px;
+
+  height: 470px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* Blue shape behind image */
+
+.photo-blue-shape {
+  position: absolute;
+
+  width: 325px;
+  height: 455px;
+
+  left: 43px;
+  top: 8px;
+
+  border-radius: 38px 55px 42px 65px;
+
+  background: linear-gradient(
+    145deg,
+    #4894f9,
+    #2588ef
+  );
+
+  transform: rotate(-4deg);
+
+  box-shadow:
+    0 18px 40px rgba(31, 112, 218, 0.18);
+}
+
+
+/* Photo frame */
+
+.photo-frame {
+  position: relative;
+
+  z-index: 2;
+
+  width: 305px;
+  height: 450px;
+
   overflow: hidden;
 
-  /* NEW - Soft Aurora Flow Background - Classy */
-  background-color: #020617;
-  background-image: 
-    radial-gradient(ellipse 800px 600px at 85% -10%, rgba(56, 189, 248, 0.15), transparent 60%),
-    radial-gradient(ellipse 600px 400px at -10% 100%, rgba(37, 99, 235, 0.18), transparent 65%);
-  
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 55px 55px 105px;
+  border-radius: 30px;
+
+  background: #ffffff;
+
+  border: 7px solid #ffffff;
+
+  transform: rotate(2deg);
+
+  box-shadow:
+    0 18px 45px rgba(28, 71, 120, 0.18);
 }
 
-/* =========================================================
-   BACKGROUND GLOW BALLS - NOW SOFT CLASSY
-========================================================= */
 
-.home-glow {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(75px);
-  z-index: 0;
-}
-
-/* LEFT GLOW - Soft */
-.glow-left {
-  width: 500px;
-  height: 500px;
-  left: -180px;
-  top: 150px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%);
-  opacity: 0.6;
-}
-
-/* RIGHT GLOW - Soft */
-.glow-right {
-  width: 600px;
-  height: 600px;
-  right: -200px;
-  top: -100px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-  opacity: 0.5;
-}
-
-/* BOTTOM GLOW - Soft */
-.glow-bottom {
-  width: 700px;
-  height: 400px;
-  left: 10%;
-  bottom: -200px;
-  background: radial-gradient(ellipse, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
-  filter: blur(80px);
-  opacity: 0.5;
-}
-
-/* =========================================================
-   EXTRA AURORA STREAKS - 3rd Wala Look
-========================================================= */
-
-.home-section::before {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 350px;
-  left: -10%;
-  top: 5%;
-  background: linear-gradient(110deg, transparent 20%, rgba(56, 189, 248, 0.08) 45%, rgba(59, 130, 246, 0.06) 55%, transparent 80%);
-  transform: rotate(-8deg);
-  filter: blur(30px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.home-section::after {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 300px;
-  left: -10%;
-  bottom: 0%;
-  background: linear-gradient(-110deg, transparent 25%, rgba(37, 99, 235, 0.09) 50%, transparent 75%);
-  transform: rotate(12deg);
-  filter: blur(35px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* =========================================================
-   REMOVE STARS
-========================================================= */
-
-.stars {
-  display: none;
-}
-
-/* =========================================================
-   MAIN CONTENT
-========================================================= */
-
-.home-container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1250px;
-  display: grid;
-  grid-template-columns: 500px 1fr;
-  align-items: center;
-  gap: 65px;
-}
-
-/* =========================================================
-   PROFILE CARD - SAME AS YOURS
-========================================================= */
-
-.profile-card {
-  width: 500px;
-  height: 550px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 24px;
-  background: linear-gradient(145deg, rgba(0, 126, 255, 0.24), rgba(2, 20, 55, 0.38));
-  border: 1.5px solid rgba(0, 190, 255, 0.72);
-  box-shadow: 0 0 12px rgba(0, 174, 255, 0.7), 0 0 45px rgba(0, 119, 255, 0.25), inset 0 0 40px rgba(0, 130, 255, 0.08);
-  backdrop-filter: blur(12px);
-  transition: 0.35s ease;
-}
-
-.profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 18px rgba(0, 190, 255, 0.9), 0 0 65px rgba(0, 119, 255, 0.35), inset 0 0 45px rgba(0, 130, 255, 0.1);
-}
-
-/* =========================================================
-   PROFILE IMAGE
-========================================================= */
-
-.profile-image-wrapper {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid #00c8ff;
-  box-shadow: 0 0 10px #00c8ff, 0 0 28px rgba(0, 200, 255, 0.9), 0 0 55px rgba(0, 119, 255, 0.5);
-  background: #041326;
-  margin-bottom: 25px;
-}
-
-.profile-photo {
+.home-profile-photo {
   width: 100%;
   height: 100%;
+
+  display: block;
+
   object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #05182d;
+
+  object-position: center;
 }
+
 
 /* =========================================================
-   PROFILE TEXT
+   FLOATING PROFILE CARD
 ========================================================= */
 
-.profile-card h2 {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+.floating-profile-card {
+  position: absolute;
+
+  z-index: 5;
+
+  left: -15px;
+  bottom: 40px;
+
+  min-width: 200px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 19px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(27, 72, 119, 0.16);
 }
 
-.profile-status {
-  margin: 7px 0 22px;
-  color: #54d9ff;
+
+.floating-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf6ff;
+
+  color: #2882f8;
+
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+
+.floating-profile-card strong {
+  display: block;
+
+  color: #172033;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+.floating-profile-card span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.home-intro {
+  min-width: 0;
+
+  max-width: 610px;
+}
+
+
+/* Availability */
+
+.availability-badge {
+  width: fit-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 17px;
+
+  padding: 8px 13px;
+
+  border-radius: 9px;
+
+  background: #e5f1ff;
+
+  color: #176fe0;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.availability-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #0eee77;
+
+  box-shadow:
+    0 0 0 4px rgba(23, 111, 224, 0.10);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.home-heading {
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+}
+
+
+.heading-hi {
+  color: #172033;
+
+  font-size: clamp(48px, 5vw, 64px);
+
+  font-weight: 800;
+}
+
+
+.heading-name {
+  margin-top: 4px;
+
+  color: #176fe0;
+
+  font-size: clamp(48px, 5vw, 66px);
+
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.home-role {
+  margin: 13px 0 11px;
+
+  color: #172033;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.home-description {
+  max-width: 590px;
+
+  margin: 0 0 22px;
+
+  color: #5189fa;
+
   font-size: 16px;
+
+  line-height: 1.65;
+
   font-weight: 500;
 }
 
+
 /* =========================================================
-   SOCIAL ICONS
+   TECH STACK
 ========================================================= */
 
-.profile-socials {
+.home-tech-stack {
   display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 23px;
+}
+
+
+.tech-item {
+  min-height: 39px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1eaf5;
+
+  box-shadow:
+    0 4px 12px rgba(28, 71, 120, 0.06);
+
+  color: #263247;
+
+  font-size: 12px;
+
+  font-weight: 750;
+}
+
+
+.tech-symbol {
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
-  gap: 20px;
+
+  width: 19px;
+  height: 19px;
+
+  font-weight: 900;
 }
 
-.profile-socials a {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
+
+.react-symbol {
+  color: #25bde9;
+
+  font-size: 18px;
+}
+
+
+.node-symbol {
+  color: #62bf55;
+
+  font-size: 18px;
+}
+
+
+.express-symbol {
+  color: #202936;
+
+  font-size: 11px;
+}
+
+
+.mongo-symbol {
+  color: #39a84a;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.home-buttons {
   display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+
+.primary-home-btn,
+.secondary-home-btn {
+  min-height: 44px;
+
+  display: inline-flex;
+
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  text-decoration: none;
-  border: 2px solid #00bfff;
-  background: rgba(0, 86, 160, 0.2);
-  box-shadow: 0 0 8px rgba(0, 190, 255, 0.8), inset 0 0 12px rgba(0, 150, 255, 0.15);
-  transition: all 0.3s ease;
-}
 
-.profile-socials a:hover {
-  transform: translateY(-5px) scale(1.08);
-  background: rgba(0, 155, 255, 0.2);
-  box-shadow: 0 0 15px #00c8ff, 0 0 30px rgba(0, 190, 255, 0.5);
-}
+  gap: 12px;
 
-.profile-socials svg {
-  width: 24px;
-  height: 24px;
-}
+  padding: 11px 20px;
 
-.linkedin-icon {
-  font-size: 22px;
+  border-radius: 8px;
+
+  font-size: 13px;
+
   font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
+
+/* Primary */
+
+.primary-home-btn {
+  color: #ffffff;
+
+  background: linear-gradient(
+    90deg,
+    #176fe0,
+    #2388ec
+  );
+
+  box-shadow:
+    0 8px 18px rgba(23, 111, 224, 0.20);
+}
+
+
+.primary-home-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(23, 111, 224, 0.28);
+}
+
+
+.primary-home-btn span {
+  font-size: 18px;
+}
+
+
+/* Secondary */
+
+.secondary-home-btn {
+  color: #176fe0;
+
+  background: #ffffff;
+
+  border: 1.5px solid #176fe0;
+}
+
+
+.secondary-home-btn:hover {
+  transform: translateY(-2px);
+
+  background: #edf6ff;
+}
+
+
+.secondary-home-btn span {
+  font-size: 17px;
+}
+
+
 /* =========================================================
-   RIGHT SIDE
+   SOCIALS
 ========================================================= */
 
-.home-info {
-  width: 100%;
+.home-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+
+.find-me {
+  margin-right: 4px;
+
+  color: #526176;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+.social-circle {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe8f2;
+
+  color: #172033;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  transition: 0.25s ease;
+}
+
+
+.social-circle svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+.social-circle:hover {
+  color: #176fe0;
+
+  border-color: #176fe0;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 6px 15px rgba(23, 111, 224, 0.13);
+}
+
+
+.linkedin-circle {
+  color: #176fe0;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   INFORMATION STRIP
+========================================================= */
+
+.home-info-strip {
+  position: relative;
+
+  z-index: 10;
+
+  width: min(1280px, 92%);
+
+  min-height: 130px;
+
+  margin: -32px auto 45px;
+
+  padding: 20px 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.55fr
+    1fr
+    1fr
+    1.05fr
+    1.15fr;
+
+  align-items: center;
+
+  gap: 0;
+
+  background: #d5e5fb;
+
+  border: 1px solid #31609a;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 12px 35px rgba(36, 92, 156, 0.1);
+}
+
+
+/* Info item */
+
+.home-info-item {
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 8px 20px;
+
+  border-right: 1px solid #034697;
+}
+
+
+.home-info-item:last-child {
+  border-right: none;
+}
+
+
+/* Icon */
+
+.info-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf6ff;
+
+  color: #176fe0;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+
+/* Text */
+
+.info-text {
   min-width: 0;
 }
 
-/* =========================================================
-   MAIN TITLE
-========================================================= */
 
-.home-title {
-  margin: 0;
-  font-size: clamp(48px, 5vw, 68px);
-  line-height: 1.05;
+.info-text h3 {
+  margin: 0 0 6px;
+
+  color: #172033;
+
+  font-size: 13px;
+
   font-weight: 800;
-  letter-spacing: -2px;
-  color: #ffffff;
-  white-space: nowrap;
 }
 
-.home-title span {
-  color: #20c8ff;
-  text-shadow: 0 0 8px rgba(0, 200, 255, 0.8), 0 0 25px rgba(0, 150, 255, 0.5);
-}
 
-/* =========================================================
-   SUBTITLE
-========================================================= */
-
-.home-subtitle {
-  margin: 13px 0 25px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #53d9ff;
-  text-shadow: 0 0 8px rgba(0, 180, 255, 0.35);
-}
-
-/* =========================================================
-   PROFESSION TAGS
-========================================================= */
-
-.profession-tags {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.profession-tags span {
-  white-space: nowrap;
-  padding: 8px 15px;
-  border-radius: 20px;
-  border: 1.5px solid rgba(0, 190, 255, 0.8);
-  background: rgba(0, 120, 210, 0.14);
-  color: #d9f7ff;
-  font-size: 12px;
-  font-weight: 600;
-  box-shadow: 0 0 8px rgba(0, 180, 255, 0.35);
-  transition: 0.3s ease;
-}
-
-.profession-tags span:hover {
-  background: rgba(0, 160, 255, 0.28);
-  box-shadow: 0 0 15px rgba(0, 200, 255, 0.65);
-  transform: translateY(-2px);
-}
-
-/* =========================================================
-   INFO CARDS
-========================================================= */
-
-.info-cards {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.info-card {
-  min-height: 145px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 25px;
-  border-radius: 17px;
-  background: linear-gradient(135deg, rgba(0, 105, 210, 0.34), rgba(4, 25, 65, 0.38));
-  border: 1.5px solid rgba(0, 184, 255, 0.72);
-  box-shadow: 0 0 10px rgba(0, 180, 255, 0.45), inset 0 0 30px rgba(0, 110, 255, 0.08);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.info-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 17px rgba(0, 200, 255, 0.7), 0 0 35px rgba(0, 130, 255, 0.2);
-}
-
-/* =========================================================
-   CONTACT CARD
-========================================================= */
-
-.contact-card {
-  grid-column: 1 / -1;
-  min-height: 112px;
-}
-
-/* =========================================================
-   CARD ICON
-========================================================= */
-
-.icon-box {
-  width: 54px;
-  height: 54px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 27px;
-  background: rgba(0, 150, 255, 0.25);
-  border: 1px solid rgba(0, 200, 255, 0.6);
-  box-shadow: 0 0 12px rgba(0, 190, 255, 0.35);
-}
-
-/* =========================================================
-   CARD TEXT
-========================================================= */
-
-.info-card h4 {
-  margin: 0 0 7px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.info-card p {
+.info-text p {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #e5f8ff;
+
+  color: #010406;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  font-weight: 500;
 }
+
 
 /* =========================================================
-   CONNECT BUTTON
+   TABLET
 ========================================================= */
 
-.connect-button {
-  position: absolute;
-  right: 75px;
-  bottom: 38px;
-  z-index: 5;
-  min-width: 175px;
-  padding: 13px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
-  border: 2px solid #00c8ff;
-  background: rgba(0, 100, 180, 0.18);
-  box-shadow: 0 0 10px #00c8ff, 0 0 25px rgba(0, 180, 255, 0.55), inset 0 0 12px rgba(0, 150, 255, 0.15);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
+@media (max-width: 1100px) {
 
-.connect-button:hover {
-  transform: translateY(-4px);
-  background: rgba(0, 170, 255, 0.22);
-  box-shadow: 0 0 15px #00c8ff, 0 0 40px rgba(0, 190, 255, 0.75);
-}
+  .home-hero-container {
+    grid-template-columns: 410px minmax(0, 1fr);
 
-/* =========================================================
-   GLOWING LINE UNDER BUTTON
-========================================================= */
+    gap: 55px;
+  }
 
-.connect-button span {
-  position: absolute;
-  bottom: -8px;
-  left: 15%;
-  width: 70%;
-  height: 2px;
-  border-radius: 5px;
-  background: #00c8ff;
-  box-shadow: 0 0 8px #00c8ff, 0 0 18px #00c8ff;
-}
+  .home-photo-area {
+    width: 390px;
+  }
 
-/* =========================================================
-   RESPONSIVE - LAPTOP
-========================================================= */
+  .photo-blue-shape {
+    width: 290px;
+  }
 
-@media (max-width: 1150px) {
-  .home-section {
-    padding-left: 30px;
-    padding-right: 30px;
+  .photo-frame {
+    width: 285px;
   }
-  .home-container {
-    grid-template-columns: 340px 1fr;
-    gap: 40px;
-  }
-  .profile-card {
-    width: 340px;
-    height: 400px;
-  }
-  .profile-image-wrapper {
-    width: 170px;
-    height: 170px;
-  }
-  .home-title {
-    font-size: 50px;
-  }
-  .profession-tags span {
-    padding: 7px 10px;
-    font-size: 11px;
-  }
-}
 
-/* =========================================================
-   TABLET / MOBILE
-========================================================= */
-
-@media (max-width: 900px) {
-  .home-section {
-    min-height: auto;
-    padding: 55px 20px 110px;
-  }
-  .home-container {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    max-width: 600px;
-  }
-  .profile-card {
-    width: 100%;
-    max-width: 390px;
-    height: 430px;
-    margin: 0 auto;
-  }
-  .home-info {
-    text-align: center;
-  }
-  .home-title {
-    white-space: normal;
+  .heading-hi,
+  .heading-name {
     font-size: 48px;
   }
-  .home-subtitle {
-    font-size: 19px;
+
+  .home-info-strip {
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    gap: 0;
   }
-  .profession-tags {
+
+  .home-info-item {
+    border-bottom: 1px solid #e5eaf0;
+  }
+
+  .home-info-item:nth-child(3) {
+    border-right: none;
+  }
+
+  .home-info-item:nth-child(4),
+  .home-info-item:nth-child(5) {
+    margin-top: 10px;
+    border-bottom: none;
+  }
+
+  .home-info-item:nth-child(4) {
+    border-right: 1px solid #e5eaf0;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .home-hero {
+    min-height: auto;
+  }
+
+  .home-hero-container {
+    width: min(620px, 92%);
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 45px 0 80px;
+  }
+
+  .home-photo-area {
+    width: 350px;
+    height: 400px;
+
+    margin: 0 auto;
+  }
+
+  .photo-blue-shape {
+    width: 270px;
+    height: 375px;
+
+    left: 40px;
+  }
+
+  .photo-frame {
+    width: 255px;
+    height: 370px;
+  }
+
+  .floating-profile-card {
+    left: 0;
+    bottom: 20px;
+  }
+
+  .home-intro {
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .availability-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-heading {
+    align-items: center;
+  }
+
+  .home-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-tech-stack {
+    justify-content: center;
+  }
+
+  .home-buttons {
     justify-content: center;
     flex-wrap: wrap;
   }
-  .info-cards {
-    text-align: left;
+
+  .home-socials {
+    justify-content: center;
   }
-  .connect-button {
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 35px;
+
+  .hero-dots-left {
+    left: 15px;
   }
-  .connect-button:hover {
-    transform: translateX(50%) translateY(-4px);
+
+  .hero-dots-right {
+    right: 15px;
   }
+
+  .home-info-strip {
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: -20px;
+
+    padding: 15px;
+  }
+
+  .home-info-item {
+    border-right: 1px solid #e5eaf0;
+    border-bottom: 1px solid #e5eaf0;
+  }
+
+  .home-info-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .home-info-item:nth-child(4),
+  .home-info-item:nth-child(5) {
+    margin-top: 0;
+    border-bottom: none;
+  }
+
 }
+
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 550px) {
-  .home-section {
-    padding: 40px 15px 105px;
+
+  .home-hero-container {
+    width: calc(100% - 30px);
+
+    padding-top: 35px;
   }
-  .profile-card {
-    height: 400px;
+
+  .home-photo-area {
+    width: 300px;
+    height: 350px;
   }
-  .profile-image-wrapper {
-    width: 165px;
-    height: 165px;
+
+  .photo-blue-shape {
+    width: 230px;
+    height: 330px;
+
+    left: 35px;
   }
-  .home-title {
-    font-size: 38px;
-    letter-spacing: -1px;
+
+  .photo-frame {
+    width: 220px;
+    height: 325px;
+
+    border-width: 5px;
+
+    border-radius: 24px;
   }
-  .home-subtitle {
-    font-size: 17px;
+
+  .floating-profile-card {
+    min-width: 175px;
+
+    padding: 11px 13px;
   }
-  .info-cards {
+
+  .floating-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .heading-hi,
+  .heading-name {
+    font-size: 39px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .home-role {
+    font-size: 22px;
+  }
+
+  .home-description {
+    font-size: 13px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primary-home-btn,
+  .secondary-home-btn {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .home-info-strip {
+    width: calc(100% - 24px);
+
     grid-template-columns: 1fr;
+
+    margin-bottom: 25px;
   }
-  .contact-card {
-    grid-column: auto;
+
+  .home-info-item,
+  .home-info-item:nth-child(4),
+  .home-info-item:nth-child(5) {
+    border-right: none;
+
+    border-bottom: 1px solid #e5eaf0;
+
+    margin: 0;
+
+    padding: 15px 10px;
   }
-  .info-card {
-    min-height: 125px;
+
+  .home-info-item:last-child {
+    border-bottom: none;
   }
-  .connect-button {
-    min-width: 165px;
-    padding: 12px 20px;
-    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .home-photo-area {
+    width: 270px;
+    height: 320px;
   }
+
+  .photo-blue-shape {
+    width: 205px;
+    height: 300px;
+
+    left: 32px;
+  }
+
+  .photo-frame {
+    width: 195px;
+    height: 295px;
+  }
+
+  .heading-hi,
+  .heading-name {
+    font-size: 34px;
+  }
+
+  .home-role {
+    font-size: 20px;
+  }
+
 }

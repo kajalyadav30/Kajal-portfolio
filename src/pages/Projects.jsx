@@ -30,7 +30,7 @@ export default function Projects() {
       transition={{ duration: 0.6 }}
       id="projects"
     >
-      <div className="card" style={{ background: 'rgba(82, 130, 212, 0.5)', borderRadius: 16, padding: 30 }}>
+      <div className="card" style={{ background: 'rgba(182, 216, 242, 0.81)', borderRadius: 16, padding: 30 }}>
         <motion.h2
           className="text-4xl font-semibold text-cyan-400 mb-2"
           initial={{ opacity: 0 }}
@@ -109,7 +109,7 @@ export default function Projects() {
                       alignItems: 'center',
                       gap: 5,
                       background: 'rgba(255,255,255,0.05)',
-                      color: '#0ea5e9',
+                      color: '#afc6e2',
                       padding: '6px 12px',
                       borderRadius: 8,
                       fontSize: 13,
@@ -129,7 +129,7 @@ export default function Projects() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: 5,
-                      background: 'linear-gradient(90deg, #06b6d4, #0891b2)',
+                      background: 'linear-gradient(90deg, #3de248, #35e962)',
                       color: '#fff',
                       padding: '6px 12px',
                       borderRadius: 8,

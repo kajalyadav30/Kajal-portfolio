@@ -1,36 +1,65 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Certificates from './pages/Certificates'
-import Blog from './pages/Blog'
-import Resume from './pages/Resume'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
-import SkillNetwork from './pages/Skills'  
+import React from "react";
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import SkillNetwork from "./pages/Skills";
+import Certificates from "./pages/Certificates";
+import Resume from "./pages/Resume";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
     <div className="app">
+      
+      {/* NAVBAR */}
       <Navbar />
-      <main style={{ flex: 1 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<SkillNetwork />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/about" element={<About />} /> {/* ✅ fixed lowercase */}
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+
+      <main>
+
+        {/* ================= HOME ================= */}
+        <section id="home">
+          <Home />
+        </section>
+
+        {/* ================= PROJECTS ================= */}
+        <section id="projects">
+          <Projects />
+        </section>
+
+        {/* ================= SKILLS ================= */}
+        <section id="skills">
+          <SkillNetwork />
+        </section>
+
+        {/* ================= CERTIFICATES ================= */}
+        <section id="certificates">
+          <Certificates />
+        </section>
+
+        {/* ================= RESUME ================= */}
+        <section id="resume">
+          <Resume />
+        </section>
+
+        {/* ================= ABOUT ================= */}
+        <section id="about">
+          <About />
+        </section>
+
+        {/* ================= CONTACT ================= */}
+        <section id="contact">
+          <Contact />
+        </section>
+
       </main>
+
+      {/* FOOTER */}
       <footer className="footer">
         © {new Date().getFullYear()} Kajal yadav — Built with React
       </footer>
+
     </div>
-  )
+  );
 }
